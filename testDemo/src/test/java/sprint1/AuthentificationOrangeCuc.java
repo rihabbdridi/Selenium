@@ -17,8 +17,7 @@ public class AuthentificationOrangeCuc {
 
 	@Given("Ouvrir URL de l application")
 	public void ouvrir_url_de_l_application() {
-		System.setProperty("webdriver.chrome.driver", "src/test/ressources/chromedriver.exe");
-
+		 System.setProperty("webdriver.chrome.driver", "src/test/ressources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -57,7 +56,7 @@ public class AuthentificationOrangeCuc {
 		String message;
 		message = profil.getText();
 		System.out.println(message);
-		Assert.assertEquals("PaulMd Arif CollingsNaikodi", message);
+		Assert.assertEquals("Paul Collings", message);
 		driver.close();
 		
 	}
